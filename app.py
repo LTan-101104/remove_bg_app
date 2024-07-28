@@ -5,7 +5,6 @@ import io
 import os
 
 app = Flask(__name__)
-
 @app.route('/', methods=['GET', 'POST'])
 def upload_files():
     #check request types

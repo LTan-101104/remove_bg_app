@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.env
+.venv
+Pipfile
+Pipfile.lock
+requirements.txt

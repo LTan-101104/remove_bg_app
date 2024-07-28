@@ -1,0 +1,19 @@
+#use an official Python runtime as the base image
+FROM python:3.9-slim
+
+#create the working directory in the container
+WORKDIR /app
+
+#copy current directory to the app directory in the container
+COPY . /app
+
+#install dependencies
+RUN pip install --no-cache-dir  Flask Pollow rembg
+
+#Mark port 5000 availlable
+EXPOSE 5000
+
+ENV FLASK_APP=app.py
+
+CMD [ "flask", "run", "--host=0.0.0.0" ]
+
