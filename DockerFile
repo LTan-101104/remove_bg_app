@@ -8,9 +8,9 @@ WORKDIR /app
 COPY . /app
 
 #install dependencies
-RUN pip install --no-cache-dir  Flask Pollow rembg
+RUN pip install --no-cache-dir Flask Pillow rembg
 
-#Mark port 5000 availlable
+#Mark port 5000 availlable, this is the port that will be on the container, later when run you will need to use whatever host on your local machine to connect to port 5000
 EXPOSE 5000
 
 ENV FLASK_APP=app.py
